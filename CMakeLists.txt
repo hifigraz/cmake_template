@@ -12,6 +12,9 @@ INCLUDE(CTest)
 # lib wide headers are located in ./src/libs/<lib_name>/include/
 # -------------------------------------------------------------------------------- 
 
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
+SET(CMAKE_CPP_FLAGS "${CMAKE_CPP_FLAGS} -Wall")
+
 FUNCTION(ADD_SINGLE_DEP target_name dependency)
   MESSAGE("Trying ${dependency}/")
   IF(EXISTS "${CMAKE_SOURCE_DIR}/src/libraries/${dependency}")
