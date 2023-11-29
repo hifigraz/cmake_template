@@ -31,6 +31,7 @@ taillog() {
   else
     echo Error occured rerun with -v to show log
   fi
+  exit 1
 }
 
 main() {
