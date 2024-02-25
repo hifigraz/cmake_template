@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 CMD=$1
 shift

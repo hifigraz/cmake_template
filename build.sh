@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 fail() {
   exit_code=$1
