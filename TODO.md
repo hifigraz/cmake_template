@@ -1,3 +1,0 @@
-# TODO
-
-Get rid of some messages from cmake-tools ...
