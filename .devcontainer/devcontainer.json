@@ -1,9 +1,6 @@
 
 {
   "name": "C++",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
 	"customizations": {
 		"vscode": {
 			"extensions": [
