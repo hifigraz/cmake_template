@@ -1,14 +1,13 @@
 
 {
-  "name": "C++",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-vscode.cpptools-extension-pack"
-			]
-		}
-	},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools-extension-pack"
+      ]
+    }
+  },
   "features": {
     "ghcr.io/wxw-matt/devcontainer-features/apt:latest": {
       "packages": "libcriterion_dev"
