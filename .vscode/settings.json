@@ -1,5 +1,5 @@
 {
     "cmake.options.statusBarVisibility": "compact",
-    "cmake.showOptionsMovedNotification": false,
+    "cmake.enableAutomaticKitScan": true,
     "git.autofetch": true
 }
