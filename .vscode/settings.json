@@ -1,5 +1,10 @@
 {
     "cmake.options.statusBarVisibility": "compact",
     "cmake.enableAutomaticKitScan": true,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ]
 }
