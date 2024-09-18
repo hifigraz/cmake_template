@@ -7,7 +7,7 @@
 				"ms-vscode.cpptools-extension-pack"
 			]
 		}
-	}
+	},
   "features": {
     "ghcr.io/wxw-matt/devcontainer-features/apt:latest": {
       "packages": "libcriterion_dev"
