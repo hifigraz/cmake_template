@@ -10,7 +10,7 @@
   },
   "features": {
     "ghcr.io/wxw-matt/devcontainer-features/apt:latest": {
-      "packages": "libcriterion-dev cmake"
+      "packages": "libcriterion-dev cmake gdb"
     }
   }
 }
