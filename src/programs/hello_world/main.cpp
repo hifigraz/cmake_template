@@ -1,7 +1,9 @@
-#include "hello.h"
+#include "include/hello.h"
 // #include <echo.h>
-#include <string>
+// #include <string>
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
+  // ahoi
+
   say_hello();
 }
