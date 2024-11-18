@@ -6,4 +6,4 @@ rm -f ./${criterion_target}
 
 cmake --build . --target $(basename ${criterion_target})
 
-./${criterion_target} || exit 2
+timeout 10 ./${criterion_target} || exit 2

@@ -27,21 +27,21 @@ shift
 } 
 
 
-${CMD} < ${IN_FILE} > ${OUT_FILE}.IS 2> ${ERR_FILE}.IS
+timeout 10 ${CMD} < ${IN_FILE} > ${OUT_FILE}.IS 2> ${ERR_FILE}.IS
 
 diff ${OUT_FILE} ${OUT_FILE}.IS > /dev/null
 out_result=$?
 
-echo "STDOUT DIFF lines marked with - are missing one with + are excessive"
-diff -u  ${OUT_FILE} ${OUT_FILE}.IS | tail +4 | sed s/^/">>>"/ | sed s/$/'\\n'/
+echo "Last 10 lines of STDOUT DIFF lines marked with - are missing one with + are excessive"
+diff -u  ${OUT_FILE} ${OUT_FILE}.IS | tail +4 | tail -n 10 | sed s/^/">>>"/ | sed s/$/'\\n'/
 
 rm -f ${OUT_FILE}.IS
 
 diff ${ERR_FILE} ${ERR_FILE}.IS > /dev/null
 err_result=$?
 
-echo "STDERR DIFF lines marked with - are missing one with + are excessive"
-diff -u  ${ERR_FILE} ${ERR_FILE}.IS | tail +4 | sed s/^/">>>"/ | sed s/$/'\\n'/
+echo "Last 10 lines of STDERR DIFF lines marked with - are missing one with + are excessive"
+diff -u  ${ERR_FILE} ${ERR_FILE}.IS | tail +4 | tail -n 10 | sed s/^/">>>"/ | sed s/$/'\\n'/
 
 rm -f ${ERR_FILE}.IS
 
