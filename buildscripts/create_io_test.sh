@@ -3,7 +3,18 @@
 cd $(dirname $0)/..
 
 program_file=$1 ; shift
+
+[ -z "${program_file}" ] && {
+  echo "usages: $(basename $0) <progam_file> <test_number>"
+  exit 1
+}
+
 test_number=$(printf "%02d" $1) ; shift
+
+[ -z "${test_number}" ] && {
+  echo "usages: $(basename $0) <progam_file> <test_number>"
+  exit 1
+}
 
 printf "Creating test number %s for program %s\n" ${test_number} ${program_file}
 

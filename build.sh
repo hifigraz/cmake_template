@@ -38,6 +38,7 @@ main() {
   CLEAN=""
   CMAKE=""
   VERBOSE=""
+  chmod +x $(dirname $0)/buildscripts/*sh
   while [ -n "$1" ]; do
     if [ "$1" == "-c" ]; then
       echo "got -c"
@@ -74,7 +75,7 @@ main() {
   cd build
   if [ -n "${CMAKE}" ]; then
     echo INFO: rerunning cmake
-    cmake .. || fail 1 CMAKE FAILED
+    cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .. || fail 1 CMAKE FAILED
   fi
   cmake --build . --target=all || fail 2 Build failed
 
