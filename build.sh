@@ -75,7 +75,7 @@ main() {
   cd build
   if [ -n "${CMAKE}" ]; then
     echo INFO: rerunning cmake
-    cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .. || fail 1 CMAKE FAILED
+    cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .. || fail 1 CMAKE FAILED
   fi
   cmake --build . --target=all || fail 2 Build failed
 
