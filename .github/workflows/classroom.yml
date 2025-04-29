@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: cmake
         setup-command: sudo apt update && sudo apt install cmake libcriterion-dev
-        command: "./build.sh -c"
+        command: "./buildscripts/build.sh -c"
         timeout: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
